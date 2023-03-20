@@ -1,5 +1,5 @@
 # BufferPiece
-SentencePiece tokenizer that operates on Bytes instead of Unicode characters.
+SentencePiece tokenizer that operates on UTF-8 bytes instead of Unicode characters.
 
 ## Motivation
 The most common subword tokenizers used in 2023 for language modeling are byte-level BPE (used in GPT-2, GPT-3, RoBERTa) and SentencePiece (usually with Unigram LM model, used in T5, PaLM, and LLaMA). Each has benefits and drawbacks. My goal in this project is to develop a tokenizer with the benefits of both SentencePiece and byte-level BPE approaches, and the drawbacks of neither.
