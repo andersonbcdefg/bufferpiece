@@ -19,7 +19,9 @@ Buffers can contain new lines, rare characters in Asian scripts, and anything el
 
 In order to train the tokenizer to recognize and handle new lines, BufferPiece should be trained on spans of text that are not necessarily contained by one sentence or paragraph. Instead, split a document into chunks, and allow those chunks to cross sentence/paragraph boundaries. This is what natural text is like, and the tokenizer should be trained accordingly!
 
-## Experiments (Work in Progress)
-The plan is to test BufferPiece in the setting where it ought to be most advantageous—tokenization for Chinese, and bilingual tokenizers for machine translation between English and Chinese. The simplest approach is to train it on Chinese and English Wikipedia, and compare it to conventional tokenizers trained on the same corpus.
+## Code & Experiments (Work in Progress)
+All the work I've done on this so far was in a Colab notebook, where I tested the basic proof of concept, made sure it could train, and properly encode and decode text. I've started moving the code into this repository but it's still rough around the edges, I need to clean it up and write real tests.
+
+After that, the plan is to test BufferPiece in the setting where it ought to be most advantageous—tokenization for Chinese, and bilingual tokenizers for machine translation between English and Chinese. The simplest approach is to train it on Chinese and English Wikipedia, and compare it to conventional tokenizers trained on the same corpus.
 
 Right away, we can compare the tokenizers by how well they compress the languages that they're trained on. More important is the downstream performance, which I will measure on language modeling in English, language modeling in Chinese, and machine translation between English and Chinese.

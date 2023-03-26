@@ -1,0 +1,4 @@
+fire
+sentencepiece
+tokenizers
+datasets
